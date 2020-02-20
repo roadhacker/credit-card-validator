@@ -24,124 +24,6 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3];
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5];
 
 
-// Add your functions below:
-// let myKey = batch[0];
-
-
-
-// function creditCardsNumbers(creditCard) {
-//   creditCard = myKey;
-//   for (indexOdd = creditCard.length-1; indexOdd > 0 ; indexOdd-- ) {
-//   console.log(creditCard[indexOdd])
-//   };
-// };
-// console.log('Credit Card Numbers: '); 
-// creditCardsNumbers();
-
-
-// function creditCardsNumbersOdd(creditCard) {
-//   creditCard = myKey;
-//   for (indexOdd = creditCard.length-1; indexOdd >= 0 ; indexOdd-=2 ) {
-
-//     console.log(creditCard[indexOdd]);
-//   };
-// };
-// console.log('Credit Card Numbers Odd: '); 
-// creditCardsNumbersOdd();
-
-
-// function creditCardsNumbersEven(creditCard) {
-//   creditCard = myKey;
-//   for (indexEven = creditCard.length-2; indexEven >= 0 ; indexEven-=2 ) {
-//   console.log(creditCard[indexEven])
-//   };
-// };
-// console.log('Credit Card Numbers Even: '); 
-// creditCardsNumbersEven();
-
-
-// function creditCardsNumbersEvenFormula(creditCard) {
-//   creditCard = myKey;
-//   for (indexEven = creditCard.length-2; indexEven > 0 ; indexEven-=2 ) {
-//     if((creditCard[indexEven]*2) > 9) {
-//     console.log((creditCard[indexEven]*2)-9)
-//     }
-//   };
-// };
-// console.log('Credit Card Numbers Even Formula: '); 
-// creditCardsNumbersEvenFormula();
-
-
-// function creditCardsNumbersEvenFormulaNotApplied(creditCard) {
-//   creditCard = myKey;
-//   for (indexEven = creditCard.length-2; indexEven >= 0 ; indexEven-=2 ) {
-//     if((creditCard[indexEven]*2) <= 9) {
-//     console.log(creditCard[indexEven]*2)
-//     }
-//   };
-// };
-// console.log('Credit Card Numbers Even Formula Not Applied: '); 
-// creditCardsNumbersEvenFormulaNotApplied();
-
-// function creditCardArray() {
-//  return creditCardsNumbersOdd() + creditCardsNumbersEvenFormula() + creditCardsNumbersEvenFormulaNotApplied();
-// };
-
-// console.log('Credit Card Array: ')
-// creditCardArray();
-
-
-
-
-// // New stuff
-// console.log('New Stuff');
-// myKey = batch[0]
-// // Array of Credit Card Numbers
-// let ccArray = [];
-
-// // Credit Card Numbers Odd: 
-// for (indexOdd = myKey.length-1; indexOdd >= 0 ; indexOdd-=2 ) {
-//     ccArray.push(myKey[indexOdd])
-// };
-
-// // Credit Card Numbers Even Formula: 
-// for (indexEven = myKey.length-2; indexEven >= 0 ; indexEven-=2 ) {
-//   if((myKey[indexEven]*2) > 9) {
-//   ccArray.push((myKey[indexEven]*2)-9)  
-//   }
-// };
-
-// // Credit Card Numbers Even Formula Not Applied: 
-// for (indexEven = myKey.length-2; indexEven >= 0 ; indexEven-=2 ) {
-//   if((myKey[indexEven]*2) <= 9) {
-//   ccArray.push(myKey[indexEven]*2)
-//   }
-// };
-
-// console.log('Credit Card Numbers Result Array: ' + ccArray);
-
-// // Sum up all digits credit card number
-// let sumDigits = ccArray.reduce((a, b) => a + b, 0);
-// console.log('Sum up all digits credit card number: ' + sumDigits);
-
-// // Sum Modulo
-// let sumModulo = sumDigits % 10;
-// console.log('Sum Modulo: ' + sumModulo);
-
-// // Validate Card
-// function validateCred2() {
-//   if(sumModulo === 0) {
-//      return 'true' 
-//   } else {
-//     return 'false'
-//   }
-// };
-
-// console.log('Validate Credit Function: ' + validateCred2())
-
-
-
-
 const validateCred = (creditCardNumber) => {
   let validationHolder = [ ];
   // Credit Card Numbers 1st set of Numbers Rule 2 | Check number: 
@@ -175,22 +57,6 @@ const validateCred = (creditCardNumber) => {
 };
 
 console.log('This is my function to validate Credit Cards: ' + validateCred(valid1));
-
-// function findInvalidCards(cards) {
-//   let invalid = [];
-//   for (let i = 0; i < cards.length; i++) {
-//     let currCred = cards[i];
-//     if (!validateCred(currCred)) {
-//       invalid.push(currCred);
-//     }
-//   }
-//   return invalid;
-// }
-
-
-// const batch2 = [valid1, invalid1, invalid2, valid2];
-// const batch3 = [invalid1];
-
 
 const findInvalidCards = (nestedBatchArray) => {
   let invalidCardsHolder = [];
@@ -227,9 +93,3 @@ const idInvalidCardCompanies = (invalidNumbers) => {
   return companies
 };
 console.log(idInvalidCardCompanies(batch));
-
-
-
-
-
-

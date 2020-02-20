@@ -207,9 +207,3 @@ const idInvalidCardCompanies = (invalidNumbers) => {
 };
 
 // idInvalidCardCompanies(batch);
-
-
-
-
-
-
